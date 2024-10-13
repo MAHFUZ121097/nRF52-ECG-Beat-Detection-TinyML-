@@ -80,7 +80,7 @@ This repository contains the firmware for a real-time ECG signal monitoring and 
 
 The following confusion matrix visualizes the classification results across different labels:
 
-![Confusion Matrix](Confusion matrix.png)
+![Confusion Matrix](Confusion_matrix.png)
 
 
 
