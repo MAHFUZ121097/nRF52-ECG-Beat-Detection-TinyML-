@@ -76,34 +76,11 @@ This repository contains the firmware for a real-time ECG signal monitoring and 
 - **Option 1:**: 192 bytes (ECG samples (185 bytes) | Classification score: N, SV, V, F, Q beats (5 bytes) | Anomaly score (1 byte) | Prediction function return 'OK' (1 byte))
 - **Option 2**: 7 bytes (Classification score: N, SV, V, F, Q beats (5 bytes) | Anomaly score (1 byte) | Prediction function return 'OK' (1 byte))
 
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import pandas as pd
+## Confusion Matrix
 
-# Data from the confusion matrix
-data = np.array([[17581, 41, 319, 130, 47],
-                 [134, 356, 57, 0, 9],
-                 [72, 4, 1276, 19, 77],
-                 [31, 5, 6, 114, 6],
-                 [38, 56, 3, 0, 1511]])
+The following confusion matrix visualizes the classification results across different labels:
 
-# Class labels
-labels = ['N', 'SV', 'V', 'F', 'Q']
+![Confusion Matrix](Confusion matrix.png)
 
-# Create a pandas DataFrame
-df_cm = pd.DataFrame(data, index=labels, columns=labels)
-
-# Plotting the confusion matrix using seaborn heatmap
-plt.figure(figsize=(10,7))
-sns.heatmap(df_cm, annot=True, fmt='d', cmap='YlGnBu')
-
-# Set plot labels
-plt.title('Confusion Matrix')
-plt.xlabel('Predicted Labels')
-plt.ylabel('True Labels')
-
-# Show the plot
-plt.show()
 
 
